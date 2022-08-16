@@ -1,7 +1,5 @@
 package ca.vlastier.httpproxy;
 
-import ca.vlastier.httpproxy.HttpProxyService.HttpRequestWrapper;
-import ca.vlastier.httpproxy.HttpProxyService.HttpResponseWrapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpHeaders;

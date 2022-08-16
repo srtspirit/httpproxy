@@ -1,6 +1,5 @@
 package ca.vlastier.httpproxy;
 
-import ca.vlastier.httpproxy.HttpProxyService.HttpRequestWrapper;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

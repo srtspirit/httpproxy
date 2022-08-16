@@ -17,14 +17,14 @@ import java.util.function.Supplier;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import static ca.vlastier.httpproxy.HttpProxyService.HttpRequestWrapper;
-import static ca.vlastier.httpproxy.HttpProxyService.HttpResponseWrapper;
-import static ca.vlastier.httpproxy.HttpProxyService.RequestConditionConfigurator;
-import static ca.vlastier.httpproxy.HttpProxyService.RequestTransformationConfigurator;
-import static ca.vlastier.httpproxy.HttpProxyService.ResponseConditionConfigurator;
-import static ca.vlastier.httpproxy.HttpProxyService.ResponseTransformationConfigurator;
-import static ca.vlastier.httpproxy.HttpProxyService.WebSurferConfigurator;
-import static ca.vlastier.httpproxy.HttpProxyService.WebSurferRule;
+import ca.vlastier.httpproxy.configuration.RequestConditionConfigurator;
+
+import ca.vlastier.httpproxy.configuration.RequestTransformationConfigurator;
+import ca.vlastier.httpproxy.configuration.ResponseConditionConfigurator;
+import ca.vlastier.httpproxy.configuration.ResponseTransformationConfigurator;
+
+import ca.vlastier.httpproxy.configuration.WebSurferConfigurator;
+
 import static java.util.Optional.ofNullable;
 
 public class HttpProxyServiceConfiguratorImpl

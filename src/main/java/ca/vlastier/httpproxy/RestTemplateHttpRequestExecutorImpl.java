@@ -21,7 +21,7 @@ public class RestTemplateHttpRequestExecutorImpl implements HttpRequestExecutor
 	}
 
 	@Override
-	public HttpProxyService.HttpResponseWrapper executeRequest(final HttpProxyService.HttpRequestWrapper request)
+	public HttpResponseWrapper executeRequest(final HttpRequestWrapper request)
 	{
 		log.info("forwarded {} request to {}.", request.getMethod(), request.getUrl());
 		//TODO handle exception
@@ -34,7 +34,7 @@ public class RestTemplateHttpRequestExecutorImpl implements HttpRequestExecutor
 		final HttpHeaders responseHeaders = new HttpHeaders();
 		responseHeaders.putAll(responseEntity.getHeaders()); //the ones inside the response are unmodifiable
 
-		return HttpProxyService.HttpResponseWrapper.builder()
+		return HttpResponseWrapper.builder()
 				.headers(responseHeaders)
 				.httpStatus(responseEntity.getStatusCode())
 				.originalResponse(responseEntity)

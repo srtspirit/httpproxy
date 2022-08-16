@@ -1,7 +1,5 @@
 package ca.vlastier.httpproxy;
 
-import ca.vlastier.httpproxy.HttpProxyService.HttpRequestWrapper;
-import ca.vlastier.httpproxy.HttpProxyService.HttpResponseWrapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,12 +22,12 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class HttpProxyServiceTest
 {
-	private final List<HttpProxyService.WebSurferRule> rules = new ArrayList<>();
+	private final List<WebSurferRule> rules = new ArrayList<>();
 	private HttpProxyService service;
 
-	private HttpProxyService.WebSurferRule rule1;
-	private HttpProxyService.WebSurferRule rule2;
-	private HttpProxyService.WebSurferRule rule3;
+	private WebSurferRule rule1;
+	private WebSurferRule rule2;
+	private WebSurferRule rule3;
 
 	@Mock
 	private HttpRequestExecutor httpRequestExecutor;
@@ -62,19 +60,19 @@ public class HttpProxyServiceTest
 	@BeforeEach
 	public void setup()
 	{
-		rule1 = HttpProxyService.WebSurferRule.builder()
+		rule1 = WebSurferRule.builder()
 				.requestPredicate(requestPredicate1)
 				.requestTransformation(requestTransformation1)
 				.responsePredicate(responsePredicate1)
 				.responseTransformation(responseTransformation1)
 				.build();
-		rule2 = HttpProxyService.WebSurferRule.builder()
+		rule2 = WebSurferRule.builder()
 				.requestPredicate(requestPredicate2)
 				.requestTransformation(requestTransformation2)
 				.responsePredicate(responsePredicate2)
 				.responseTransformation(responseTransformation2)
 				.build();
-		rule3 = HttpProxyService.WebSurferRule.builder()
+		rule3 = WebSurferRule.builder()
 				.requestPredicate(requestPredicate3)
 				.requestTransformation(requestTransformation3)
 				.responsePredicate(responsePredicate3)

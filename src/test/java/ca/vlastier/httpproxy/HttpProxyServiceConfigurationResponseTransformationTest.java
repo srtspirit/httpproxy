@@ -1,7 +1,5 @@
 package ca.vlastier.httpproxy;
 
-import ca.vlastier.httpproxy.FileReader;
-import ca.vlastier.httpproxy.HttpProxyService.HttpResponseWrapper;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Parser;
 import org.junit.jupiter.api.Assertions;
